@@ -1,0 +1,64 @@
+<DOCTYPE! html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/search.css">
+    <title>Search: The Rise of Modern China</title>
+</head>
+        
+<body>
+            
+    <!-- This is the logo, web title & navbar -->
+    <header class="mainTitle">
+        <a href="index.html"><img src="img/china-flag-logo.png" alt="Website logo of Chinese flag" class="logo"></a>
+        <h1 class="mainTitle">The Rise of Modern China</h1>
+        
+        <nav class="navbar">
+            <ul class="navbar-banner">
+                <li class="navbar-content"><a href="index.html">Home</a></li>
+                <li class="navbar-content"><a href="topics.html">Topics</a></li>
+                <li class="navbar-content"><a href="">Timeline</a></li>
+                <li class="navbar-content"><a href="">About Us</a></li>
+                <li class="navbar-content"><a href="search-page.html">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!---------------------------------------------------------------------->
+
+    <input type="text" id="mySearch" onkeyup="searchFcn()" placeholder="Search.." title="Type in a category">
+
+    <ul id="myMenu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">PHP</a></li>
+        <li><a href="#">Python</a></li>
+        <li><a href="#">jQuery</a></li>
+        <li><a href="#">SQL</a></li>
+        <li><a href="#">Bootstrap</a></li>
+        <li><a href="#">Node.js</a></li>
+    </ul>
+
+</body>
+
+<!-- This contains the search function -->
+<script>
+    function searchFcn() {
+      // Declare variables
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>

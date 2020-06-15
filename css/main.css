@@ -89,7 +89,11 @@ img.logo{
     display: none;
 }
 
-.navbar-content:hover .dropdown:hover .dropdown-content{
+dropdown:hover{
+    display: block;
+}
+
+dropdown:hover .dropdown-content{
     display: block;
     position: relative;
     color: whitesmoke;
