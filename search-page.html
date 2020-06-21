@@ -27,13 +27,22 @@
     </header>
     <!---------------------------------------------------------------------->
 
-    <!-- Search bar starts here -->
+    <!-- Search bar below here -->
     <input type="text" id="searchbar" onkeyup="searchFcn()" placeholder="Search.." title="Type in a category">
 
-    <ul id="results">
-        <li><a href="#">Article</a></li>
+    <h2 class="subTitle">Results</h2>
+    <ul id="results" class="results">
+        <li><img src="img/china-flag-logo.png" class="previewImg">
+          <a href="Article">Article1</a>
+        </li>
+        <li><img src="img/blueOrange.jpg" class="previewImg">
+          <a href="Article1">Article2</a>
+        </li>
+        <li>
+          <img src="img/blueOrange.jpg" class="previewImg">
+          <a href="Article2">Article2</a>
+        </li>
     </ul>
-
 </body>
 
 <!-- This contains the search function -->
@@ -46,16 +55,15 @@
       li = ul.getElementsByTagName("li");
     
       // Check all items, hide those without the keyword
-
       for (i = 0; i < li.length; i++) {
         item = li[i].getElementsByTagName("a")[0];
 
         if (item.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
+          li[i].style.display = "block";
         } else {
           li[i].style.display = "none";
         }
       }
     }
-    </script>
+</script>
     <!-- -------------------------------------------------------------------- -->

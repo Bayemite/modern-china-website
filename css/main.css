@@ -13,10 +13,11 @@ body{
 /* Paragraphing */
 .center-paragraph{
     font-family: 'Roboto', sans-serif;
-    width: 60%;
+    width: 55%;
     margin: 20px auto;
     line-height: 1.5;
     color: white;
+    text-align: justify;
 }
 
 /* Header class things */
@@ -35,6 +36,20 @@ h2.mainTitle{
     font-family: 'Work Sans', 'Montserrat', sans-serif;
     margin: 3px;
 }
+
+h2.subTitle{
+    color: white;
+    text-align: center;
+    font-size: 24px;    
+    font-family: 'Work Sans', 'Montserrat', sans-serif;
+    margin: 20px auto;
+    padding: 3px 25%;
+    vertical-align: middle;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    width: fit-content;
+}
+
 /*------------------------------------------------------*/
 
 /* img stuff */
