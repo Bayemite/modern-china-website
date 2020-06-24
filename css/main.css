@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap');
 
 *{box-sizing: border-box;}
 
@@ -10,24 +11,74 @@ body{
     text-align: center;
 }
 
+h2{
+    font-family: 'Work Sans', sans-serif; 
+}
+
+p{
+    line-height: 2;
+}
+
+footer{
+    background-color: dimgrey;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
+    padding: 0;
+}
+
 /* Paragraphing */
 .center-paragraph{
     font-family: 'Roboto', sans-serif;
-    width: 55%;
-    margin: 20px auto;
+    width: 50%;
+    margin: 5px auto;
+    padding: 40px;
     line-height: 1.5;
     color: white;
     text-align: justify;
+    background-color: rgb(60, 60, 60);
+}
+
+.subHeader{
+    font-size: 28px;
+    margin: 0;
+    line-height: .5;
+    text-decoration: none;
+    text-align: left;
+}
+
+.subHeaderContrast{
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.rightAlign{
+    float: right;
 }
 
 /* Header class things */
 
 h1.mainTitle{
+    display: block;
     text-align: center;
+    left: -60px;
+    padding: 15px 26px 6px 9px;
     font-size: 50px;    
     font-family: 'Work Sans', 'Montserrat', sans-serif;
-    margin: 3px;     
-    text-transform: uppercase;       
+    margin: 15px auto 0;  
+    text-transform: uppercase; 
+    background-color: dimgray;
+    height: auto;
+    color: whitesmoke;
+    width: fit-content;
 }
 
 h2.mainTitle{
@@ -48,18 +99,23 @@ h2.subTitle{
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     width: fit-content;
+    max-width: 60%;
+    letter-spacing: 2px;
 }
 
 /*------------------------------------------------------*/
 
 /* img stuff */
-img.logo{
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    font-size: 18px;
-    width: 4.35vw;
-    background-color: transparent;
+img.logo{   
+    vertical-align: middle;
+    width: 60px;
+    margin: 5px;
+    padding: 0 0 8px 0;
+    
+}
+
+a.logo{
+    text-decoration: none;
 }
 
 /* Navbar classes */
@@ -68,8 +124,11 @@ img.logo{
     display: inline-block;
     text-align: center;
     background-color: dimgray;
-    width: 60%;
+    width: 100%;
+    margin: 12px auto;
+    margin-top: 10px;
 }
+
 .navbar-banner{
     padding: 3px;
     margin: 5px 3px;

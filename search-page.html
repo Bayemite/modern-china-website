@@ -10,8 +10,12 @@
             
     <!-- This is the logo, web title & navbar -->
     <header class="mainTitle">
-        <a href="index.html"><img src="img/china-flag-logo.png" alt="Website logo of Chinese flag" class="logo"></a>
-        <h1 class="mainTitle">The Rise of Modern China</h1>
+      <h1 class="mainTitle">
+        <a href="index.html" class="logo">
+            <img src="img/china-flag-logo.png" alt="Website logo of Chinese flag" class="logo">
+        </a>
+        The Rise of Modern China
+    </h1>
         
         <div class ="sticky">
         <nav class="navbar">
@@ -19,7 +23,7 @@
                 <li class="navbar-content"><a href="index.html">Home</a></li>
                 <li class="navbar-content"><a href="topics.html">Topics</a></li>
                 <li class="navbar-content"><a href="">Timeline</a></li>
-                <li class="navbar-content"><a href="">About Us</a></li>
+                <li class="navbar-content"><a href="about-us.html">About Us</a></li>
                 <li class="navbar-content"><a href="search-page.html">Search</a></li>
             </ul>
         </nav>
@@ -28,9 +32,10 @@
     <!---------------------------------------------------------------------->
 
     <!-- Search bar below here -->
-    <input type="text" id="searchbar" onkeyup="searchFcn()" placeholder="Search.." title="Type in a category">
+    <input type="text" id="searchbar" onkeyup="searchFcn()" placeholder="Search for articles.." title="Type in a category">
 
     <h2 class="subTitle">Results</h2>
+
     <ul id="results" class="results">
         <li><img src="img/china-flag-logo.png" class="previewImg">
           <a href="Article">Article1</a>
