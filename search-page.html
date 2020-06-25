@@ -4,31 +4,16 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/search.css">
     <title>Search-The Rise of Modern China</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script> 
+    <script> 
+        $(function(){
+          $("#main-navbar").load("../navbar.html"); 
+        });
+        </script>
 </head>
-        
+    
 <body>
-            
-    <!-- This is the logo, web title & navbar -->
-    <header class="mainTitle">
-        
-      <h1 class="mainTitle">
-          <a href="index.html" class="logo">
-              <img src="img/china-flag-logo.png" alt="Website logo of Chinese flag" class="logo">
-          </a>
-          The Rise of Modern China
-      </h1>
-  
-  
-          <nav class="navbar">
-              <ul class="navbar-banner">
-                  <li class="navbar-content"><a href="index.html">Home</a></li>
-                  <li class="navbar-content"><a href="article-index.html">Index</a></li>
-                  <li class="navbar-content"><a href="about-us.html">About Us</a></li>
-                  <li class="navbar-content"><a href="search-page.html">Search</a></li>
-              </ul>
-          </nav>
-      </header>
-      <!---------------------------------------------------------------------->
+    <nav id="main-navbar"></nav>
 
     <!-- Search bar below here -->
     <input type="text" id="searchbar" onkeyup="searchFcn()" placeholder="Search for articles.." title="Type in article title">
@@ -36,7 +21,8 @@
     <h2 class="subTitle">Results</h2>
 
     <ul id="results" class="results">
-        <li><img src="img/china-flag-logo.png" class="previewImg">
+        <li>
+          <img src="img/china-flag-logo.png" class="previewImg">
           <a href="Article">Article1</a>
         </li>
         <li><img src="img/blueOrange.jpg" class="previewImg">
