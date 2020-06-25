@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/search.css">
-    <title>Search: The Rise of Modern China</title>
+    <title>Search-The Rise of Modern China</title>
 </head>
         
 <body>
@@ -22,6 +22,7 @@
           <nav class="navbar">
               <ul class="navbar-banner">
                   <li class="navbar-content"><a href="index.html">Home</a></li>
+                  <li class="navbar-content"><a href="article-index.html">Index</a></li>
                   <li class="navbar-content"><a href="about-us.html">About Us</a></li>
                   <li class="navbar-content"><a href="search-page.html">Search</a></li>
               </ul>
@@ -30,7 +31,7 @@
       <!---------------------------------------------------------------------->
 
     <!-- Search bar below here -->
-    <input type="text" id="searchbar" onkeyup="searchFcn()" placeholder="Search for articles.." title="Type in a category">
+    <input type="text" id="searchbar" onkeyup="searchFcn()" placeholder="Search for articles.." title="Type in article title">
 
     <h2 class="subTitle">Results</h2>
 
@@ -51,12 +52,11 @@
 <!-- This contains the search function -->
 <script>
     function searchFcn() {
-      var input, filter, ul, li, item, i;
+      var input, filter, ul, li, item, i, meta;
       input = document.getElementById("searchbar");
       filter = input.value.toUpperCase();
-      ul = document.getElementById("results");
-      li = ul.getElementsByTagName("li");
-    
+      li = document.getElementById("results").getElementsByTagName("li");
+
       // Check all items, hide those without the keyword
       for (i = 0; i < li.length; i++) {
         item = li[i].getElementsByTagName("a")[0];
