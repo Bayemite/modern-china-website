@@ -29,16 +29,30 @@ footer{
     padding: 0;
 }
 
+a{
+    color: floralwhite;
+}
 /* Paragraphing */
 .center-paragraph{
     font-family: 'Roboto', sans-serif;
     width: 50%;
     margin: 5px auto;
     padding: 40px;
-    line-height: 1.5;
+    line-height: 2;
     color: white;
     text-align: justify;
     background-color: rgb(60, 60, 60);
+}
+
+ul.center-paragraph{
+    list-style: none;
+    margin: 5px auto;
+    padding: 5px auto;
+}
+
+.left{
+    float: left;
+    margin: 30px;
 }
 
 .subHeader{
