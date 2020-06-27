@@ -8,7 +8,7 @@
     <script> 
         $(function(){
           $("#main-navbar").load("../navbar.html"); 
-        });
+        });        
         </script>
 </head>
     
@@ -16,43 +16,80 @@
     <nav id="main-navbar"></nav>
 
     <!-- Search bar below here -->
-    <input type="text" id="searchbar" onkeyup="searchFcn()" placeholder="Search for articles.." title="Type in article title">
+    <input type="text" id="searchbar" 
+    oninput="refresh()"
+    placeholder="Search for articles.." title="Type in article title">
+    <!-- --- -->
 
-    <h2 class="subTitle">Results</h2>
+    <button id="search-button" onclick="searchFcn()">Search</button>
 
-    <ul id="results" class="results">
-        <li>
-          <img src="img/china-flag-logo.png" class="previewImg">
-          <a href="Article">Article1</a>
-        </li>
-        <li><img src="img/blueOrange.jpg" class="previewImg">
-          <a href="Article1">Article2</a>
-        </li>
-        <li>
-          <img src="img/blueOrange.jpg" class="previewImg">
-          <a href="Article2">Article2</a>
-        </li>
+    <h2 class="subTitle" style="display: none;" id="resultsTitle">Results</h2>
+
+    <ul id="results" class="results" id="results">
+
+      <li>
+        <a class="title" href="articles/introducing-modern-china.html">Introducing Modern China</a>
+        <p class="descrip"><br><br>
+          On 1 January 1912, the Republic of China was established, 
+        and Sun Yat-sen of the Kuomintang (the KMT or Nationalist Party) was proclaimed
+        provisional president.<br><br>
+        </p>
+        <img src="img/Sun-Yat-sen-ROC.png" alt="Sun Yat-sen proclaimed provisional president">  
+      </li>
+
+      <li>
+        <a class="title" href="about-us.html">Introducing Dummy Article</a>
+        <p class="descrip"><br><br>
+          On 1 April 2035, the Republic of Avocados was established, 
+        and my son of the Oranges (the Fruit Coalition or Juice Party) was proclaimed
+        as provisions.<br><br>
+        </p>
+        <img src="img/blueOrange.jpg" alt="Sun Yat-sen proclaimed provisional president">  
+      </li>
+        
     </ul>
+
 </body>
 
-<!-- This contains the search function -->
+
+
+
 <script>
-    function searchFcn() {
-      var input, filter, ul, li, item, i, meta;
-      input = document.getElementById("searchbar");
-      filter = input.value.toUpperCase();
-      li = document.getElementById("results").getElementsByTagName("li");
-
-      // Check all items, hide those without the keyword
-      for (i = 0; i < li.length; i++) {
-        item = li[i].getElementsByTagName("a")[0];
-
-        if (item.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "block";
-        } else {
-          li[i].style.display = "none";
-        }
-      }
+  $("#searchbar").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#search-button").click();
     }
+});
+
+  function refresh(){
+    document.getElementById("resultsTitle").style.display = "none";
+    var list = document.getElementById("results").getElementsByTagName("li");
+
+    for(var i = 0; i < list.length; i++){
+      list[i].style.display = "none";
+    }
+  }
+
+    function searchFcn() {
+    
+    document.getElementById("resultsTitle").style.display = "block";    
+
+    var input, filter, ul, li, a, i, val;
+    input = document.getElementById('searchbar');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("results");
+    li = ul.getElementsByTagName('li');
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    val = a.textContent || a.innerText;
+    if (val.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "block";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
 </script>
     <!-- -------------------------------------------------------------------- -->
