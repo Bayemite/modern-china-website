@@ -6,6 +6,11 @@
 *{
     box-sizing: border-box;
     font-family: 'Roboto', 'Work Sans', sans-serif;
+    color: white;
+}
+
+a:hover{
+    background-color: rgb(70, 70, 70);
 }
 
 body{
@@ -35,6 +40,7 @@ footer{
 
 a{
     color: whitesmoke;
+    padding: 5px;
 }
 
 /* -------------------- */
@@ -180,6 +186,10 @@ a.logo{
     text-decoration: none;
 }
 
+a.logo:hover{
+    background-color: transparent;
+}
+
 .center-img{
     text-align: center;
     display: block;
@@ -193,8 +203,8 @@ a.logo{
 }
 
 .img{
-    width: 100%;
-    border: 2px solid black;
+    width: auto;
+    border: 1px solid white;
 }
 
 /* ------------------------------------------------------------------------------------------ */
@@ -226,10 +236,6 @@ a.logo{
     font-family: 'Montserrat', 'Roboto', sans-serif;
     color: whitesmoke;
     padding: 7px 10px;
-}
-
-.navbar-content > a:hover{
-    border-bottom: 2px solid black;
 }
 
 /*

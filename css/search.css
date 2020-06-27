@@ -20,10 +20,6 @@ body{
   padding: 5px;
 }
 
-.title:hover{
-  background-color: rgb(68, 68, 68);
-}
-
 img{
   max-width: 400px;
   max-height: 300px;
