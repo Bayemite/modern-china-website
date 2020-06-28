@@ -179,7 +179,7 @@ img.logo{
     vertical-align: middle;
     width: 60px;
     margin: 5px;
-    padding: 0 0 8px 0;
+    padding: 0;
 }
 
 a.logo{
@@ -192,18 +192,16 @@ a.logo:hover{
 
 .center-img{
     text-align: center;
-    display: block;
+    display: inline-block;
     font-family: 'Roboto', sans-serif;
     width: 50%;
     margin: 5px auto;
     padding: 40px;
-    line-height: 2;
-    color: white;
     background-color: rgb(60, 60, 60);
 }
 
 .img{
-    width: auto;
+    width: 100%;
     border: 1px solid white;
 }
 
