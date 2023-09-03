@@ -1,10 +1,14 @@
 window.onload = () => {
+    let url = 'https://bayemite.github.io/modern-china-website';
+    if(localStorage.getItem('debug'))
+        url = '..';
+    
     document.getElementById('main-navbar').innerHTML = `
 <header class="mainTitle">
         
     <h1 class="mainTitle">
-        <a href="../index.html" class="logo">
-            <img src="../img/china-flag-logo.png" alt="Website logo of Chinese flag" class="logo">
+        <a href="${url}/index.html" class="logo">
+            <img src="${url}/img/china-flag-logo.png" alt="Website logo of Chinese flag" class="logo">
             The Rise of Modern China
         </a>
     </h1>
@@ -12,10 +16,10 @@ window.onload = () => {
 
         <nav class="navbar">
             <ul class="navbar-banner">
-                <li class="navbar-content"><a href="../index.html">Home</a></li>
-                <li class="navbar-content"><a href="../article-index.html">Index</a></li>
-                <li class="navbar-content"><a href="../about-us.html">About Us</a></li>
-                <li class="navbar-content"><a href="../search-page.html">Search</a></li>
+                <li class="navbar-content"><a href="${url}/index.html">Home</a></li>
+                <li class="navbar-content"><a href="${url}/article-index.html">Index</a></li>
+                <li class="navbar-content"><a href="${url}/about-us.html">About Us</a></li>
+                <li class="navbar-content"><a href="${url}/search-page.html">Search</a></li>
             </ul>
         </nav>
     </header>
