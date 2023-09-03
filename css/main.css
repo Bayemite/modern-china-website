@@ -237,27 +237,8 @@ a.logo:hover{
     padding: 7px 10px;
 }
 
-/*
-.dropdown{
-    position: absolute;
-    display: none;
-    background-color: gray;
-    margin: 8px 11px;
-    padding: 7px 10px;
+ul.center-paragraph > li{
+    text-align: left;
+    font-size: 16px;
+    line-height: 2;
 }
-
-.dropdown-content{
-    display: none;
-}
-
-dropdown:hover{
-    display: block;
-}
-
-dropdown:hover .dropdown-content{
-    display: block;
-    position: relative;
-    color: whitesmoke;
-    text-align: center;
-}
-*/
